@@ -42,7 +42,7 @@ async def start():
     for name in files:
         with open(name) as a:
             patt = Path(a.name)
-            plugin_name = patt.stem.replace(".py", "")
+            plugin_name = patt.stem.replace(".py", "@MovieFireTamil1")
             plugins_dir = Path(f"plugins/{plugin_name}.py")
             import_path = "plugins.{}".format(plugin_name)
             spec = importlib.util.spec_from_file_location(import_path, plugins_dir)
